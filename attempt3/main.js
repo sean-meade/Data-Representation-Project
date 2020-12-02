@@ -27,6 +27,17 @@ var pause = true;
 var speedFactor = 50;
 
 function setupMap(center) {
+    var runnerLoc = {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [center[0], center[1]]
+        },
+        "properties": {
+            "name": "Runner Location"
+        }
+    };
+ 
     // Create map object
     const map = new mapboxgl.Map({
         // ID of where map ends up
@@ -36,16 +47,9 @@ function setupMap(center) {
         zoom: 15
     });
 
-    var geolocate = new mapboxgl.GeolocateControl();
+    
 
-    map.addControl(geolocate);
-
-    geolocate.on('geolocate', function(e) {
-        var lon = e.coords.longitude;
-        var lat = e.coords.latitude
-        var runner = turf.featureCollection([turf.point([lon, lat])]);
-        return runner
-    });
+    
 
     // Track user location
     map.addControl(new mapboxgl.GeolocateControl({
@@ -56,23 +60,16 @@ function setupMap(center) {
         fitBoundsOptions: {zoom:15}
     }));
 
-    
-
     map.dragPan.disable();
-}
 
-// Create a GeoJSON feature collection for the warehouse
-//var halfwayMark = turf.featureCollection([turf.point()]);
-var runnerLoc = turf.featureCollection([turf.point(runner)]);
-
-map.on('load', function() {
+    map.on('load', function() {
+    
     var marker = document.createElement('div');
-    marker.classList = 'truck';
-  
-    // Create a new marker
+    marker.classList = 'runner';    
+
     runnerMarker = new mapboxgl.Marker(marker)
-      .setLngLat(runnerLoc)
-      .addTo(map);
+    .setLngLat(center)
+    .addTo(map);
 
     // Create new layer
     map.addLayer({
@@ -89,22 +86,8 @@ map.on('load', function() {
             'circle-stroke-width': 3,
         }
     });
-
-    // create symbol
-    map.addLayer({
-        id: 'runnerLoc',
-        type: 'symbol',
-        source: {
-            data: runnerLoc,
-            type: geojson
-        },
-        layout: {
-            'icon-image': 'imgs/runner.png',
-            'icon-size': 1
-        },
-        paint: {
-            'text-color': '#3887be'
-        }
-    })
     
-});
+        
+})}
+
+
