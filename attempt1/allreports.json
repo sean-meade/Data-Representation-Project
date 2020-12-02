@@ -1,0 +1,676 @@
+{
+    "pagination": {
+        "pageSize": 50,
+        "currentPage": 1,
+        "totalItems": 22856,
+        "totalPages": 458
+    },
+    "resourceBaseUri": "http://reports.sem-o.com/documents",
+    "items": [
+        {
+            "_id": "5c5dc7269620d9056e1f0642",
+            "PublishTime": "2019-02-08T17:39:26+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190208_20190208_ALL_REPT_20190208T173926.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c3e15172508332aaa44f5e9",
+            "Date": "2019-01-01",
+            "PublishTime": "2019-01-15T16:50:00",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201901151650.xml",
+            "DateRetention": "2019-01-01"
+        },
+        {
+            "_id": "5c3daf232508334350134ef4",
+            "Date": "2019-02-01",
+            "PublishTime": "2019-01-15T09:38:50",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201901150938.xml",
+            "DateRetention": "2019-02-01"
+        },
+        {
+            "_id": "5baa07d2250833324c870a5c",
+            "PublishTime": "2018-09-21T12:29:25+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181001_20180921_ALL_REPT_20180921T122925.XML",
+            "DateRetention": "2018-10-01"
+        },
+        {
+            "_id": "5c41fb87250833685d545a84",
+            "PublishTime": "2019-01-18T15:48:05+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190118_20190118_ALL_REPT_20190118T154805.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5b8585862508331d716884be",
+            "PublishTime": "2018-04-21T06:55:13+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20180101_20180421_ALL_REPT_20180421T065513.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c0262a925083305c80efb2f",
+            "Date": "2018-12-01",
+            "PublishTime": "2018-12-01T10:00:02",
+            "DPuG_ID": "BM-003",
+            "ReportName": "Registered Capacity",
+            "Group": [
+                "Registration"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MnlyRegisteredCapacity_201812011000.xml",
+            "DateRetention": "2018-12-01"
+        },
+        {
+            "_id": "5c1782512508332f5c1523f4",
+            "PublishTime": "2018-12-17T10:39:01+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181217_20181217_ALL_REPT_20181217T103901.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c49d9ff9620d92c1110a75a",
+            "PublishTime": "2019-01-24T15:11:55+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190124_20190124_ALL_REPT_20190124T151154.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5bdad5ab2508337394304e16",
+            "Date": "2018-12-01",
+            "PublishTime": "2018-11-01T10:00:02",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201811011000.xml",
+            "DateRetention": "2018-12-01"
+        },
+        {
+            "_id": "5c6438019620d932553c1508",
+            "PublishTime": "2019-02-13T14:47:08+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190213_20190213_ALL_REPT_20190213T144708.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c7813949620d96af465b1ae",
+            "PublishTime": "2019-02-28T16:32:49+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190228_20190228_ALL_REPT_20190228T163249.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c4f38979620d966205ba173",
+            "PublishTime": "2019-01-28T16:49:56+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190128_20190128_ALL_REPT_20190128T164956.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c589d479620d9378642a026",
+            "PublishTime": "2019-02-04T19:43:55+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190204_20190204_ALL_REPT_20190204T194355.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c73c3ac9620d936d70bfb5a",
+            "Date": "2019-03-01",
+            "PublishTime": "2019-02-25T10:00:02",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201902251000.xml",
+            "DateRetention": "2019-03-01"
+        },
+        {
+            "_id": "5bf8391c250833460a3c10fe",
+            "PublishTime": "2018-11-23T16:57:36+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181001_20181123_ALL_REPT_20181123T165736.XML",
+            "DateRetention": "2018-11-23"
+        },
+        {
+            "_id": "5c2b412b2508335b7525e566",
+            "Date": "2019-02-01",
+            "PublishTime": "2019-01-01T10:00:02",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201901011000.xml",
+            "DateRetention": "2019-02-01"
+        },
+        {
+            "_id": "5bd7401725083353db6afcdd",
+            "PublishTime": "2018-10-29T16:55:36+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181001_20181029_ALL_REPT_20181029T165536.XML",
+            "DateRetention": "2018-10-29"
+        },
+        {
+            "_id": "5c0262aa25083305c80efb30",
+            "Date": "2019-01-01",
+            "PublishTime": "2018-12-01T10:00:02",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201812011000.xml",
+            "DateRetention": "2019-01-01"
+        },
+        {
+            "_id": "5c53309d9620d9729c18cab6",
+            "PublishTime": "2019-01-31T17:05:25+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190131_20190131_ALL_REPT_20190131T170525.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c6ee01c9620d950db233bfc",
+            "PublishTime": "2019-02-21T17:08:49+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190221_20190221_ALL_REPT_20190221T170849.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5bd1da732508335ebd21e392",
+            "Date": "2019-01-01",
+            "PublishTime": "2018-10-25T14:23:50",
+            "DPuG_ID": "BM-009",
+            "ReportName": "Annual Load Forecast",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_AnnualLoadFcst_201810251423.xml",
+            "DateRetention": "2019-01-01"
+        },
+        {
+            "_id": "5c0ea9a325083303a501bca4",
+            "PublishTime": "2018-12-10T17:30:12+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181210_20181210_ALL_REPT_20181210T173012.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c2b412b2508335b7525e565",
+            "Date": "2019-01-01",
+            "PublishTime": "2019-01-01T10:00:02",
+            "DPuG_ID": "BM-003",
+            "ReportName": "Registered Capacity",
+            "Group": [
+                "Registration"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MnlyRegisteredCapacity_201901011000.xml",
+            "DateRetention": "2019-01-01"
+        },
+        {
+            "_id": "5c3db9b22508335a9749b685",
+            "Date": "2018-12-01",
+            "PublishTime": "2019-01-15T10:21:01",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201901151021.xml",
+            "DateRetention": "2018-12-01"
+        },
+        {
+            "_id": "5c7810109620d9623542b061",
+            "Date": "2019-02-01",
+            "PublishTime": "2019-02-28T16:20:55",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201902281620.xml",
+            "DateRetention": "2019-02-01"
+        },
+        {
+            "_id": "5babb2c92508331f357cc3bf",
+            "PublishTime": "2018-08-29T19:00:02+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20180829_20180829_ALL_REPT_20180829T190002.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5bc704a12508334ea45d758f",
+            "PublishTime": "2018-10-17T09:19:43+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181016_20181017_ALL_REPT_20181017T091943.XML",
+            "DateRetention": "2018-10-17"
+        },
+        {
+            "_id": "5bd7401625083353db6ae61c",
+            "PublishTime": "2018-10-29T16:45:19+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181001_20181029_ALL_REPT_20181029T164518.XML",
+            "DateRetention": "2018-10-29"
+        },
+        {
+            "_id": "5bd9c37325083346f4084cde",
+            "PublishTime": "2018-10-31T14:35:52+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181001_20181031_ALL_REPT_20181031T143552.XML",
+            "DateRetention": "2018-10-31"
+        },
+        {
+            "_id": "5c1168c225083372c70c6e9e",
+            "PublishTime": "2018-12-12T19:28:09+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181212_20181212_ALL_REPT_20181212T192808.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c37768f2508337cdb04a2f9",
+            "PublishTime": "2019-01-10T16:16:03+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190110_20190110_ALL_REPT_20190110T161603.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5b2bd28a522f3a3f9105106c",
+            "Date": "2018-01-01",
+            "PublishTime": "2018-06-21T16:04:05",
+            "DPuG_ID": "BM-009",
+            "ReportName": "Annual Load Forecast",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_AnnualLoadFcst_201806211604.xml",
+            "DateRetention": "2018-01-01"
+        },
+        {
+            "_id": "5c51c6809620d9190e6e6878",
+            "PublishTime": "2019-01-30T15:18:29+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20190130_20190130_ALL_REPT_20190130T151829.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5b4d204b25083355005bc338",
+            "PublishTime": "2018-02-28T10:02:29+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20180101_20180228_ALL_REPT_20180228T100229.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5b8585862508331d71689db3",
+            "PublishTime": "2018-05-24T12:15:22+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20180401_20180524_ALL_REPT_20180524T121522.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c20f0ef2508337b833d12e8",
+            "PublishTime": "2018-12-24T14:18:42+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181001_20181224_ALL_REPT_20181224T141842.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5c541fab9620d91644006b50",
+            "Date": "2019-02-01",
+            "PublishTime": "2019-02-01T10:00:02",
+            "DPuG_ID": "BM-003",
+            "ReportName": "Registered Capacity",
+            "Group": [
+                "Registration"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MnlyRegisteredCapacity_201902011000.xml",
+            "DateRetention": "2019-02-01"
+        },
+        {
+            "_id": "5d4294fa9620d9583e3e326d",
+            "Date": "2020-01-01",
+            "PublishTime": "2019-08-01T07:00:01",
+            "DPuG_ID": "BM-009",
+            "ReportName": "Annual Load Forecast",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_AnnualLoadFcst_201908010700.xml",
+            "DateRetention": "2020-01-01"
+        },
+        {
+            "_id": "5dbf5bf19620d93c127f0d02",
+            "DPuG_ID": "EA-009",
+            "ReportName": "Intraday Market Results Statistics",
+            "Group": [
+                "Market Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "IDC_Statistic_20191103103004.csv",
+            "PublishTime": "2019-11-04T01:00:05",
+            "Date": "2019-11-03",
+            "DateRetention": "2019-11-03"
+        },
+        {
+            "_id": "5dc4a1f49620d9750823cad2",
+            "DPuG_ID": "EA-009",
+            "ReportName": "Intraday Market Results Statistics",
+            "Group": [
+                "Market Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "IDC_Statistic_20191107103004.csv",
+            "PublishTime": "2019-11-08T01:00:04",
+            "Date": "2019-11-07",
+            "DateRetention": "2019-11-07"
+        },
+        {
+            "_id": "5ddff6119620d9565345fcdb",
+            "DPuG_ID": "EA-009",
+            "ReportName": "Intraday Market Results Statistics",
+            "Group": [
+                "Market Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "IDC_Statistic_20191117103003.csv",
+            "PublishTime": "2019-11-29T01:00:09",
+            "Date": "2019-11-17",
+            "DateRetention": "2019-11-17"
+        },
+        {
+            "_id": "5ddff6139620d9565345fda8",
+            "DPuG_ID": "EA-009",
+            "ReportName": "Intraday Market Results Statistics",
+            "Group": [
+                "Market Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "IDC_Statistic_20191126103005.csv",
+            "PublishTime": "2019-11-29T01:00:10",
+            "Date": "2019-11-26",
+            "DateRetention": "2019-11-26"
+        },
+        {
+            "_id": "5db1dc1d9620d972f02ce907",
+            "PublishTime": "2019-10-24T15:22:02+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20191024_20191024_ALL_REPT_20191024T152202.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5dc744f29620d92290325cd2",
+            "DPuG_ID": "EA-009",
+            "ReportName": "Intraday Market Results Statistics",
+            "Group": [
+                "Market Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "IDC_Statistic_20191109103004.csv",
+            "PublishTime": "2019-11-10T01:00:06",
+            "Date": "2019-11-09",
+            "DateRetention": "2019-11-09"
+        },
+        {
+            "_id": "5ddff6119620d9565345fcaa",
+            "DPuG_ID": "EA-009",
+            "ReportName": "Intraday Market Results Statistics",
+            "Group": [
+                "Market Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "IDC_Statistic_20191115103004.csv",
+            "PublishTime": "2019-11-29T01:00:09",
+            "Date": "2019-11-15",
+            "DateRetention": "2019-11-15"
+        },
+        {
+            "_id": "5e174a7f9620d90c5e5bc6a2",
+            "DPuG_ID": "EA-009",
+            "ReportName": "Intraday Market Results Statistics",
+            "Group": [
+                "Market Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "IDC_Statistics_20191128_20191129T155530Z.csv",
+            "PublishTime": "2020-01-10T01:00:05",
+            "Date": "2019-11-29",
+            "DateRetention": "2019-11-29"
+        },
+        {
+            "_id": "5c98adb19620d909160f2f21",
+            "Date": "2019-04-01",
+            "PublishTime": "2019-03-25T10:00:02",
+            "DPuG_ID": "BM-011",
+            "ReportName": "Monthly Load Forecast and Assumptions",
+            "Group": [
+                "Forecast Data"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MonthlyLoadFcst_201903251000.xml",
+            "DateRetention": "2019-04-01"
+        },
+        {
+            "_id": "5c83b54f9620d911fa6f85c2",
+            "PublishTime": "2019-03-09T12:15:03+00:00",
+            "DPuG_ID": "BM-085",
+            "ReportName": "Settlement Calendar",
+            "Group": [
+                "Settlement Data"
+            ],
+            "Dynamic": true,
+            "ResourceName": "SC_PT_ALL_20181001_20190309_ALL_REPT_20190309T121503.XML",
+            "DateRetention": {
+                "$undefined": true
+            }
+        },
+        {
+            "_id": "5d42b11d9620d920300bc7d9",
+            "Date": "2019-08-01",
+            "PublishTime": "2019-08-01T09:00:02",
+            "DPuG_ID": "BM-003",
+            "ReportName": "Registered Capacity",
+            "Group": [
+                "Registration"
+            ],
+            "Dynamic": false,
+            "ResourceName": "PUB_MnlyRegisteredCapacity_201908010900.xml",
+            "DateRetention": "2019-08-01"
+        }
+    ]
+}
