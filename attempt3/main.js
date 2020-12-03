@@ -47,10 +47,6 @@ function setupMap(center) {
         zoom: 15
     });
 
-    
-
-    
-
     // Track user location
     map.addControl(new mapboxgl.GeolocateControl({
         positionOptions: {
@@ -60,15 +56,15 @@ function setupMap(center) {
         fitBoundsOptions: {zoom:15}
     }));
 
-    map.dragPan.disable();
+    //map.dragPan.disable();
 
     map.on('load', function() {
-    
+
     var marker = document.createElement('div');
     marker.classList = 'runner';    
 
     runnerMarker = new mapboxgl.Marker(marker)
-    .setLngLat(center)
+    .setLngLat([center[0]+0.01, center[1]+0.01])
     .addTo(map);
 
     // Create new layer
@@ -87,6 +83,38 @@ function setupMap(center) {
         }
     });
     
+//Create a symbol layer on top of circle layer
+map.loadImage(
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Running_icon_-_Noun_Project_17825.svg/200px-Running_icon_-_Noun_Project_17825.svg.png',
+    function (error, image) {
+    if (error) throw error;
+    map.addImage('cat', image);
+    map.addSource('point', {
+    'type': 'geojson',
+    'data': {
+    'type': 'FeatureCollection',
+    'features': [
+    {
+    'type': 'Feature',
+    'geometry': {
+    'type': 'Point',
+    'coordinates': [center[0], center[1]]
+    }
+    }
+    ]
+    }
+    });
+    map.addLayer({
+    'id': 'points',
+    'type': 'symbol',
+    'source': 'point',
+    'layout': {
+    'icon-image': 'cat',
+    'icon-size': 0.25
+    }
+    });
+    }
+    );
         
 })}
 

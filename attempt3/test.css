@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+div.box {
+  background: #EEE;
+  height: 100%;
+  width: 100%;
+}
+
+div.div1 {
+  background: #999;
+  float: top;
+  height: 70%;
+  width: auto;
+}
+
+div.div2 {
+  background: #666;
+  height: 30%;
+}
