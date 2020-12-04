@@ -8,7 +8,6 @@ html, body {
     height: 100%;
     width: 100%;
     border: 3px solid #fff;
-    padding: 10px;
 }
 
 #map {
@@ -30,7 +29,3 @@ html, body {
     background: #3887be;
     pointer-events: none;
 }
-
-
-
-

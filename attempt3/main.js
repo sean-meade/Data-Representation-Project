@@ -117,5 +117,3 @@ map.loadImage(
     );
         
 })}
-
-
