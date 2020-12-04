@@ -1,6 +1,8 @@
 // Set Token
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2Vhbi1tZWFkZSIsImEiOiJja2kzZThkNDgxOTljMnhtc3cyeWpocHAyIn0.dBYGHaeYoY7lVo6X1AS6xg';
 
+var currentLoc;
+
 // Get current location
 navigator.geolocation.getCurrentPosition(successLocation,
     errorLocation,
@@ -9,6 +11,8 @@ navigator.geolocation.getCurrentPosition(successLocation,
 
 function successLocation(position) {
     setupMap([position.coords.longitude, position.coords.latitude]);
+    currentLoc = [position.coords.latitude, position.coords.longitude];
+    return currentLoc;
 }
 
 function errorLocation() {
@@ -115,5 +119,4 @@ map.loadImage(
     });
     }
     );
-        
 })}
