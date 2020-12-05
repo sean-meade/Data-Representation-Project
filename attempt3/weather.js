@@ -17,13 +17,21 @@ function weatherConditions(){
 
         var date = document.getElementsByTagName("option")[dateIndex];
 
-        // console.log(lat, long);
+        var csvInfo = lat + "," + long + "," + date + "," + time;
 
-        var url = "http://metwdb-openaccess.ichec.ie/metno-wdb2ts/locationforecast?lat=" + lat + ";long=" + long + ";from=" + date + "T" + time + ";to=" + date + "T" + time;
-        // year-month-day
-
+        document.getElementById(infoForRun).innerHTML = csvInfo;
 
 
+
+        // // console.log(lat, long);
+
+        // var url = "http://metwdb-openaccess.ichec.ie/metno-wdb2ts/locationforecast?lat=" + lat + ";long=" + long + ";from=" + date + "T" + time + ";to=" + date + "T" + time;
+        // // year-month-day
+
+        // console.log(fetch(url, {
+        //     mode: 'cors',
+        //     credentials: 'include',
+        //   }));
         
-}
+        }
 }
