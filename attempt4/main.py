@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, make_response, jsonify
+from flask import Flask, redirect, url_for, render_template, request, make_response, jsonify
 import sys
 import json
 from flask_jsglue import JSGlue
@@ -32,7 +32,6 @@ def weather_link():
         time= data['time']
 
         result = soup.find_all("time", {"from": date + "T" + time + ":00Z"})
-
         temperature = result[0].temperature['value']
         windDirection = result[0].windDirection['deg']
         windSpeed = result[0].windSpeed['mps']
@@ -40,7 +39,7 @@ def weather_link():
         pressure = result[0].pressure['value']
         precipitationMax = result[1].precipitation['maxvalue']
         precipitationMin = result[1].precipitation['minvalue']
-        print(temperature, windDirection, windSpeed, humidity, pressure, precipitationMax, precipitationMin)
+        #user = [temperature, windDirection, windSpeed, humidity, pressure, precipitationMax, precipitationMin]
 
 
        # do whatever you want with the data here e.g look up in database or something
@@ -51,9 +50,16 @@ def weather_link():
 
         # this returns back received data and you should see it in browser console
         # because of the console.log() in the script.
-        return jsonify(data)
+        #return redirect(url_for("user", temperature = temperature, windDirection = windDirection, windSpeed = windSpeed))
+        #return render_template('index.html', temperature = temperature, windDirection = windDirection, windSpeed = windSpeed, humidity = humidity, pressure = pressure, precipitationMax = precipitationMax, precipitationMin = precipitationMin)
+        return {'temperature': temperature, 'windDirection': windDirection, 'windSpeed': windSpeed, 'humidity': humidity, 'pressure': pressure, 'precipitationMax': precipitationMax, 'precipitationMin': precipitationMin}
     else:
         return render_template('<h1>Nope</h1>')
+
+@app.route("/<temperature>/<windDirection>/<windSpeed>")
+def user(temperature, windDirection, windSpeed):
+    return f"<h1>{temperature}</h1>\n<h1>{windDirection}</h1>\n<h1>{windSpeed}</h1>"
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

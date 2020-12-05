@@ -24,6 +24,7 @@ function weatherConditions(){
 
         //document.getElementById("weatherInfo").innerText = document.getElementById("weatherInfo").innerText.replace("a", url);
         
+        var html;
         $.ajax({
           url: Flask.url_for('weather_link'),
           type: 'POST',
@@ -31,9 +32,15 @@ function weatherConditions(){
           contentType: 'application/json'
           })
           .done(function(result){     // on success get the return object from server
-              console.log(result);     // do whatever with it. In this case see it in console
-          })
-        
+            document.getElementById("temperature").innerText = "Temperature: " + result["temperature"];
+            document.getElementById("windDirection").innerText = "Wind Direction: " + result["windDirection"];
+            document.getElementById("windSpeed").innerText = "Wind Speed: " + result["windSpeed"];
+            document.getElementById("humidity").innerText = "Humidity :" + result["humidity"];
+            document.getElementById("pressure").innerText = "Pressure :" + result["pressure"];
+            document.getElementById("precipitationMax").innerText = "Precipitation Max :" + result["precipitationMax"];
+            document.getElementById("precipitationMin").innerText = "Precipitation Min:" + result["precipitationMin"];
+        })
+        }
         //var csvInfo = {lat: lat, long: long, date: date, time: time};
 
         //var filler = lat + "," + long + "," + date + "," + time + ",";
@@ -47,5 +54,4 @@ function weatherConditions(){
                 // // year-month-day
 
         //$.ajax({ url: url, success: function(data) { alert(data); } });
-        }
-}
+    }
