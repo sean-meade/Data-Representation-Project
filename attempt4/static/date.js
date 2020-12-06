@@ -18,9 +18,9 @@ for (var i = 0; i < 7; i++) {
     const selectBox = document.querySelector('#weekAhead');
     var date = new Date();
     var dateChange = date.addDays(i);
-    var dayNo = dateChange.getDay();
+    var dayNo = dateChange.getDate();
     var dateVal = dateChange.getMonth() + 1;
-    var dayName = dayNames[dayNo];
+    var dayName = dayNames[dateChange.getDay()];
     if (dateVal < 10){
         dateVal = "0" + dateVal;
     }

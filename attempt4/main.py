@@ -16,6 +16,7 @@ def home():
     # Set a same-site cookie for first-party contexts
     # Ensure you use "add" to not overwrite existing cookie headers
     # Set a cross-site cookie for third-party contexts
+    
     resp.headers.add('Set-Cookie','cookie2=value2; SameSite=None; Secure')
     return resp
 
@@ -24,14 +25,21 @@ def weather_link():
     if request.method == "POST":
         data = {}
         data = request.json
+        print("---------------------------\n")
+        
+        print("\n---------------------------\n")
         #data['title'] = request.json['title']
         #data['release_date'] = request.json['movie_release_date']
         response = requests.get(data['url'], verify=False)
         soup = BeautifulSoup(response.text, 'xml')
+        print(soup)
+        print("\n---------------------------\n")
         date= data['date']
         time= data['time']
 
         result = soup.find_all("time", {"from": date + "T" + time + ":00Z"})
+        print(result)
+        print("\n---------------------------\n")
         temperature = result[0].temperature['value']
         windDirection = result[0].windDirection['deg']
         windSpeed = result[0].windSpeed['mps']

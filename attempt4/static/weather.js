@@ -24,14 +24,15 @@ function weatherConditions(){
 
         //document.getElementById("weatherInfo").innerText = document.getElementById("weatherInfo").innerText.replace("a", url);
         
-        var html;
+        console.log(url);
         $.ajax({
           url: Flask.url_for('weather_link'),
           type: 'POST',
           data: JSON.stringify({ "url": url , 'date': date, 'time': time}),
           contentType: 'application/json'
           })
-          .done(function(result){     // on success get the return object from server
+          .done(function(result){  
+               console.log("done");  // on success get the return object from server
             document.getElementById("temperature").innerText = "Temperature: " + result["temperature"];
             document.getElementById("windDirection").innerText = "Wind Direction: " + result["windDirection"];
             document.getElementById("windSpeed").innerText = "Wind Speed: " + result["windSpeed"];
