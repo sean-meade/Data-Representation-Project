@@ -33,7 +33,7 @@ for (var i = 0; i < 7; i++) {
     selectBox.add(newOption,undefined);
 }
 
-for (var j = 0; j < 25; j++){
+for (var j = 0; j < 24; j++){
     var timeOption;
     const selectBox = document.querySelector('#time');
     if (j < 10) {

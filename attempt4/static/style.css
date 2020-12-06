@@ -30,6 +30,6 @@ html, body {
     pointer-events: none;
 }
 
-p {
-    display: inline;
+#weatherInfo {
+    display: inline-block;
 }

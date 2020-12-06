@@ -3,6 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2Vhbi1tZWFkZSIsImEiOiJja2kzZThkNDgxOTljMnhtc
 
 var currentLoc;
 
+console.log(distance.value);
+
 // Get current location
 navigator.geolocation.getCurrentPosition(successLocation,
     errorLocation,
