@@ -3,7 +3,7 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2Vhbi1tZWFkZSIsImEiOiJja2kzZThkNDgxOTljMnhtc
 
 var currentLoc;
 
-//console.log(distance.value);
+// console.log(distance.value);
 
 // Get current location
 navigator.geolocation.getCurrentPosition(successLocation,
@@ -32,7 +32,11 @@ var pointHopper = {};
 var pause = true;
 var speedFactor = 50;
 
-function setupMap(center) {
+// Create an empty GeoJSON feature collection for drop-off locations
+var running_route = turf.featureCollection([]);
+
+function setupMap(center, distance) {
+    //console.log(center, "center");
     var runnerLoc = {
         "type": "Feature",
         "geometry": {
@@ -43,8 +47,44 @@ function setupMap(center) {
             "name": "Runner Location"
         }
     };
-    console.log(center[0], center[1]);
+
+    //console.log(center[0], center[1]);
+    
+    if (distance != undefined){
+        // console.log("what this works?!?");
+        // make a list of lat long for route
+        // 1 lat degree is 69 miles
+        // 1 long degree is 54.6 miles
+        var i = distance/54.6; // dist_in_long
+        var j = distance/69; // dist_in_lat
+
+        var d = 3; // divide
+
+        var x = center[0]; //current_long
+        var y = center[1]; //currnt_lat
+
+        var coord_i = i/Math.sqrt(Math.pow(d, 2) * 2);
+        var coord_j = j/Math.sqrt(Math.pow(d, 2) * 2);
+        
+        // var circle_points = {
+        //     1: [[x], [y - j/d]],
+        //     2: [[x + coord_i], [y + coord_j]],
+        //     3: [[x + i/d], [y]],
+        //     4: [[x + coord_i], [y - coord_j]],
+        //     5: [[x], [y - i/d]],
+        //     6: [[x - coord_i], [y - coord_j]],
+        //     7: [[x - i/d], [y]],
+        //     8: [[x - coord_i], [y + coord_j]] 
+        // }
+
+        var circle_points = [[x, y - j/d], [x + coord_i, y + coord_j],[x + i/d, y],[x + coord_i, y - coord_j],[x, y - i/d],[x - coord_i, y - coord_j],[x - i/d, y],[x - coord_i, y + coord_j]]
+    }
+    //console.log(distance, "distance");
  
+    console.log(circle_points, "circle_points");
+    // console.log(circle_points[1][0]);
+    // console.log(circle_points[2]);
+
     // Create map object
     const map = new mapboxgl.Map({
         // ID of where map ends up
@@ -63,9 +103,9 @@ function setupMap(center) {
         fitBoundsOptions: {zoom:15}
     }));
 
-   
-
     //map.dragPan.disable();
+
+    
 
     map.on('load', function() {
 
@@ -91,6 +131,20 @@ function setupMap(center) {
             'circle-stroke-width': 3,
         }
     });
+
+    // map.addLayer({
+    //     id: 'running-points',
+    //     type: 'symbol',
+    //     source: {
+    //       data: dropoffs,
+    //       type: 'geojson'
+    //     },
+    //     layout: {
+    //       'icon-allow-overlap': true,
+    //       'icon-ignore-placement': true,
+    //       'icon-image': 'marker-15',
+    //     }
+    //   });
     
 //Create a symbol layer on top of circle layer
 map.loadImage(
