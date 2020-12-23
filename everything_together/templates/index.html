@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan My Run</title>
+    <link rel="icon" 
+      type="image/ico" 
+      href="{{ url_for('static', filename='/img/favicon.ico') }}" />
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" defer>
+    {{ JSGlue.include() }}
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <script src="{{ url_for('static', filename='route.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='date.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='weather.js') }}" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div id="map" >
+
+    </div>
+    <div class="row g-3 contain">
+        <div class="col g-0">
+
+            <div class="distance each-box">
+                <h5>Choose how to make a route</h5>
+                <div class="input-group mb-2" id="dist">
+                    <span class="input-group-text">Map a</span>
+                    <input type="number" id="distance" class="form-control">
+                    <span class="input-group-text">mile run</span>
+                    
+                </div>
+                <div class="form-check form-switch mb-2" id="weatherSliderButton">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="true" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Click/Auto</label>
+                    <button type="button" class="btn btn-primary" id="routeButton" onclick="setupMap()">Activate Auto Route</button>
+                </div>
+                
+                <div>
+                    <dl class="row">
+                        <dt class="col">Distance (miles):</dt>
+                        <dd class="col" id="miles"></dd>
+                    </dl>
+                </div>
+
+                <div>
+                    <figure class="quote">
+                        <blockquote id="quote">
+
+                        </blockquote>
+                        <figcaption> &mdash; <span id="name"></span> </figcaption>
+                    </figure>
+                </div>
+                
+
+            </div>
+
+
+        </div>
+
+        <div class="col g-3">
+
+            <div class="input-parameters each-box">
+                
+                <h5>Collect weather information</h5>
+                <select id="weekAhead" class="form-select form-select-sm mb-2">
+                    <option selected>for</option>
+                </select>
+
+                <select id="time" class="form-select form-select-sm mb-2">
+                    <option selected>at</option>
+                </select>
+
+                <div class="form-check form-switch mb-2">
+                    <button type="button" class="btn btn-primary" onclick="weatherConditions()">Check Weather</button>
+                </div>            
+            </div>
+
+        </div>
+
+        <div class="col g-0">
+
+            <div class="weather each-box">
+                <h5>Weather information:</h5>
+                <dl class="row">
+                    <dt class="col">Temperature (&deg;C):</dt>
+                    <dd class="col" id="temperature"></dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col">Wind Direction:</dt>
+                    <dd class="col" id="windDirection"></dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col">Wind Speed (m/s):</dt>
+                    <dd class="col" id="windSpeed"></dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col">Humidity (%):</dt>
+                    <dd class="col" id="humidity"></dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col">Pressure (hPa):</dt>
+                    <dd class="col" id="pressure"></dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col">Precip. Max/Min (mm):</dt>
+                    <dd class="col" id="precipitationMaxMin"></dd>
+                </dl>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+       document.getElementById('flexSwitchCheckChecked').onclick = function() {
+    // access properties using this keyword
+    if ( this.checked ) {
+        // if checked ...
+        document.getElementById("flexSwitchCheckChecked").value = true;
+        document.getElementById("dist").style.visibility = "visible";
+        document.getElementById("routeButton").innerText = "Activate Auto Route";
+    } else {
+        document.getElementById("flexSwitchCheckChecked").value = false;
+        document.getElementById("dist").style.visibility = "hidden";
+        document.getElementById("routeButton").innerText = "Activate Click Route";
+    }
+};
+    </script>
+</body>
+</html>

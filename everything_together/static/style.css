@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 65vh;
+    width: 100vw;
+}
+
+#dist {
+    margin: 0;
+    padding: 0;
+    visibility: visible;
+}
+
+.contain {
+    height: 35vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+#flexSwitchCheckChecked {
+    margin-left: 10px;
+}
+
+#weatherSliderButton {
+    margin-top: 20px;
+}
+
+#routeButton {
+    margin-left: 70px;
+}
+
+.each-box {
+    width: 25vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.weather, .distance {
+    margin-top: 2.5vh;
+}
+
+dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
