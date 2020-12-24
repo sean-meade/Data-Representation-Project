@@ -28,11 +28,11 @@
         <!-- First column containing choice of how to make route, distance input, and output of distance of route displayed on the map -->
         <div class="col g-4">
             <div class="distance">
-                <h5>Choose how to make a route</h5>
+                <h5>Choose click (auto is in developement)</h5>
                 <!-- Choice of automatic route -->
                 <div class="form-check form-switch mb-2" id="weatherSliderButton">
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="true" checked>
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Click/Auto</label>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Clickable (white)/Automatic (blue)</label>
                 </div>
                 <!-- Input of miles for auto route -->
                 <div class="input-group mb-2" id="dist">
@@ -42,7 +42,7 @@
                 </div>
                 <!-- Button to activate map for interaction -->
                 <div>
-                    <button type="button" class="btn btn-primary" id="routeButton" onclick="setupMap()">Activate Auto Route</button>
+                    <button type="button" class="btn btn-primary" id="routeButton" onclick="setupMap()">Activate Automatic Route</button>
                 </div>
                 <!-- Output distance of route displayed on map -->
                 <div>
@@ -59,7 +59,7 @@
         <!-- Second column containing input of day of the next 7, time of day and submission button -->
         <div class="col g-4">
             <div>
-                <h5>Collect weather information</h5>
+                <h5>Day and time to check weather</h5>
                 <!-- select option for day of the week -->
                 <select id="weekAhead" class="form-select form-select-sm mb-2">
                     <option selected>for</option>
@@ -117,12 +117,12 @@
             // set value to true, show distance input and change text on button
             document.getElementById("flexSwitchCheckChecked").value = true;
             document.getElementById("dist").style.visibility = "visible";
-            document.getElementById("routeButton").innerText = "Activate Auto Route";
+            document.getElementById("routeButton").innerText = "Activate Automatic Route";
         } else { // and if toggle is not checked
             // set value to false, hide distance input and change text on button
             document.getElementById("flexSwitchCheckChecked").value = false;
             document.getElementById("dist").style.visibility = "hidden";
-            document.getElementById("routeButton").innerText = "Activate Click Route";
+            document.getElementById("routeButton").innerText = "Activate Clickable Route";
         }
     };
     </script>
