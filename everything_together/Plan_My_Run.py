@@ -12,8 +12,13 @@ jsglue = JSGlue(app)
 
 @app.route("/")
 def home():
+    resp = make_response(render_template("index.html"))
+    # Set a same-site cookie for first-party contexts
+    # Ensure you use "add" to not overwrite existing cookie headers
+    # Set a cross-site cookie for third-party contexts
     
-    return render_template("index.html")
+    resp.headers.add('Set-Cookie','cookie2=value2; SameSite=None; Secure')
+    return resp
 
 @app.route("/weather_link", methods=["POST"])
 def weather_request():
