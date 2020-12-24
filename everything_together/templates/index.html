@@ -24,112 +24,107 @@
     <div id="map" >
 
     </div>
-    <div class="row g-3 contain">
-        <div class="col g-0">
-
-            <div class="distance each-box">
+    <div class="row g-3 boxs">
+        <!-- First column containing choice of how to make route, distance input, and output of distance of route displayed on the map -->
+        <div class="col g-4">
+            <div class="distance">
                 <h5>Choose how to make a route</h5>
+                <!-- Choice of automatic route -->
+                <div class="form-check form-switch mb-2" id="weatherSliderButton">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="true" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Click/Auto</label>
+                </div>
+                <!-- Input of miles for auto route -->
                 <div class="input-group mb-2" id="dist">
                     <span class="input-group-text">Map a</span>
                     <input type="number" id="distance" class="form-control">
                     <span class="input-group-text">mile run</span>
-                    
                 </div>
-                <div class="form-check form-switch mb-2" id="weatherSliderButton">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="true" checked>
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Click/Auto</label>
+                <!-- Button to activate map for interaction -->
+                <div>
                     <button type="button" class="btn btn-primary" id="routeButton" onclick="setupMap()">Activate Auto Route</button>
                 </div>
-                
+                <!-- Output distance of route displayed on map -->
                 <div>
-                    <dl class="row">
-                        <dt class="col">Distance (miles):</dt>
-                        <dd class="col" id="miles"></dd>
-                    </dl>
+                    <table>
+                        <tr id="distanceOutput">
+                            <th >Distance of route (miles):</th>
+                            <td id="miles"></td>
+                            </tr>
+                    </table>
                 </div>
-
-                <div>
-                    <figure class="quote">
-                        <blockquote id="quote">
-
-                        </blockquote>
-                        <figcaption> &mdash; <span id="name"></span> </figcaption>
-                    </figure>
-                </div>
-                
-
             </div>
-
-
         </div>
 
-        <div class="col g-3">
-
-            <div class="input-parameters each-box">
-                
+        <!-- Second column containing input of day of the next 7, time of day and submission button -->
+        <div class="col g-4">
+            <div>
                 <h5>Collect weather information</h5>
+                <!-- select option for day of the week -->
                 <select id="weekAhead" class="form-select form-select-sm mb-2">
                     <option selected>for</option>
                 </select>
-
+                <!-- select option for time of day -->
                 <select id="time" class="form-select form-select-sm mb-2">
                     <option selected>at</option>
                 </select>
-
+                <!-- Submission button to get weather information -->
                 <div class="form-check form-switch mb-2">
                     <button type="button" class="btn btn-primary" onclick="weatherConditions()">Check Weather</button>
                 </div>            
             </div>
-
         </div>
 
-        <div class="col g-0">
-
-            <div class="weather each-box">
+        <!-- Third column to display the weather information -->
+        <div class="col g-4">
+            <div id="weatherOutput">
                 <h5>Weather information:</h5>
-                <dl class="row">
-                    <dt class="col">Temperature (&deg;C):</dt>
-                    <dd class="col" id="temperature"></dd>
-                </dl>
-                <dl class="row">
-                    <dt class="col">Wind Direction:</dt>
-                    <dd class="col" id="windDirection"></dd>
-                </dl>
-                <dl class="row">
-                    <dt class="col">Wind Speed (m/s):</dt>
-                    <dd class="col" id="windSpeed"></dd>
-                </dl>
-                <dl class="row">
-                    <dt class="col">Humidity (%):</dt>
-                    <dd class="col" id="humidity"></dd>
-                </dl>
-                <dl class="row">
-                    <dt class="col">Pressure (hPa):</dt>
-                    <dd class="col" id="pressure"></dd>
-                </dl>
-                <dl class="row">
-                    <dt class="col">Precip. Max/Min (mm):</dt>
-                    <dd class="col" id="precipitationMaxMin"></dd>
-                </dl>
+                <table>
+                <tr>
+                    <th>Temperature (&deg;C):</th>
+                    <td id="temperature"></td>
+                </tr>
+                <tr >
+                    <th >Wind Direction:</th>
+                    <td id="windDirection"></td>
+                </tr>
+                <tr >
+                    <th >Wind Speed (m/s):</th>
+                    <td  id="windSpeed"></td>
+                </tr>
+                <tr >
+                    <th >Humidity (%):</th>
+                    <td  id="humidity"></td>
+                </tr>
+                <tr >
+                    <th >Pressure (hPa):</th>
+                    <td  id="pressure"></td>
+                </tr>
+                <tr >
+                    <th >Precip. Max/Min (mm):</th>
+                    <td  id="precipitationMaxMin"></dd>
+                </tr>
+            </table>
             </div>
-
         </div>
 
     </div>
     <script>
-       document.getElementById('flexSwitchCheckChecked').onclick = function() {
-    // access properties using this keyword
-    if ( this.checked ) {
-        // if checked ...
-        document.getElementById("flexSwitchCheckChecked").value = true;
-        document.getElementById("dist").style.visibility = "visible";
-        document.getElementById("routeButton").innerText = "Activate Auto Route";
-    } else {
-        document.getElementById("flexSwitchCheckChecked").value = false;
-        document.getElementById("dist").style.visibility = "hidden";
-        document.getElementById("routeButton").innerText = "Activate Click Route";
-    }
-};
+    // create a function the activates when the toggle is clicked to hide/show distance input
+    document.getElementById('flexSwitchCheckChecked').onclick = function() {
+        // If it's chaecked
+        if ( this.checked ) {
+            // set value to true, show distance input and change text on button
+            document.getElementById("flexSwitchCheckChecked").value = true;
+            document.getElementById("dist").style.visibility = "visible";
+            document.getElementById("routeButton").innerText = "Activate Auto Route";
+        } else { // and if toggle is not checked
+            // set value to false, hide distance input and change text on button
+            document.getElementById("flexSwitchCheckChecked").value = false;
+            document.getElementById("dist").style.visibility = "hidden";
+            document.getElementById("routeButton").innerText = "Activate Click Route";
+        }
+    };
     </script>
 </body>
 </html>
