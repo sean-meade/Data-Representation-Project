@@ -1,6 +1,7 @@
 This repository contains my project submission for the module Data Representation in GMITs H.Dip in data analytics.
 
 currently hosted at (check note before using): https://seanmeade.pythonanywhere.com/
+
 note: pythonanywhere doesn't allow threading and therefore the weather information part won't work. I am looking at hosting it somewhere else that does support it.
 
 ## Introduction
@@ -28,6 +29,14 @@ I used MapBox to display the map and its API to request a geoJSON feature which 
 I used Met Éireanns API to request the weather information and then parsed it for the relevant values.
 
 ## How to Use
+
+### clone to locally host
+
+Navigate to the directory you wish to clone this repo into and use the following command:
+
+`git clone https://github.com/sean-meade/Data-Representation-Project.git`
+
+### Using the interface
 There are three columns underneath the map. 
 
 ![image of plan my run](static/img/plan_my_run.png)
@@ -43,8 +52,10 @@ This uses the date and time given and the users current location to give weather
 Simply displays the information of the request made by the "Check Weather" button.
 
 ## Things to work on:
-
 - obviously the method of automatically producing a route needs a lot of work. 
 - put clickable as default.
 - make it possible to choose the location to start or choose your current location.
 - create a file holding the weather parsing in Python and import into Plan_My_Run.py to make it tidier.
+
+If anyone knows of a good place to host a web app with threading let me know.
+
