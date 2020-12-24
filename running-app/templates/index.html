@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan My Run</title>
+    <link rel="icon" 
+      type="image/ico" 
+      href="{{ url_for('static', filename='/img/favicon.ico') }}" />
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" defer>
+    {{ JSGlue.include() }}
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <script src="{{ url_for('static', filename='route.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='date.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='weather.js') }}" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div id="map" >
+
+    </div>
+    <div class="row g-3 boxs">
+        <!-- First column containing choice of how to make route, distance input, and output of distance of route displayed on the map -->
+        <div class="col g-4">
+            <div class="distance">
+                <h5>Choose how to make a route</h5>
+                <!-- Choice of automatic route -->
+                <div class="form-check form-switch mb-2" id="weatherSliderButton">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="true" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Click/Auto</label>
+                </div>
+                <!-- Input of miles for auto route -->
+                <div class="input-group mb-2" id="dist">
+                    <span class="input-group-text">Map a</span>
+                    <input type="number" id="distance" class="form-control">
+                    <span class="input-group-text">mile run</span>
+                </div>
+                <!-- Button to activate map for interaction -->
+                <div>
+                    <button type="button" class="btn btn-primary" id="routeButton" onclick="setupMap()">Activate Auto Route</button>
+                </div>
+                <!-- Output distance of route displayed on map -->
+                <div>
+                    <table>
+                        <tr id="distanceOutput">
+                            <th >Distance of route (miles):</th>
+                            <td id="miles"></td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second column containing input of day of the next 7, time of day and submission button -->
+        <div class="col g-4">
+            <div>
+                <h5>Collect weather information</h5>
+                <!-- select option for day of the week -->
+                <select id="weekAhead" class="form-select form-select-sm mb-2">
+                    <option selected>for</option>
+                </select>
+                <!-- select option for time of day -->
+                <select id="time" class="form-select form-select-sm mb-2">
+                    <option selected>at</option>
+                </select>
+                <!-- Submission button to get weather information -->
+                <div class="form-check form-switch mb-2">
+                    <button type="button" class="btn btn-primary" onclick="weatherConditions()">Check Weather</button>
+                </div>            
+            </div>
+        </div>
+
+        <!-- Third column to display the weather information -->
+        <div class="col g-4">
+            <div id="weatherOutput">
+                <h5>Weather information:</h5>
+                <table>
+                <tr>
+                    <th>Temperature (&deg;C):</th>
+                    <td id="temperature"></td>
+                </tr>
+                <tr >
+                    <th >Wind Direction:</th>
+                    <td id="windDirection"></td>
+                </tr>
+                <tr >
+                    <th >Wind Speed (m/s):</th>
+                    <td  id="windSpeed"></td>
+                </tr>
+                <tr >
+                    <th >Humidity (%):</th>
+                    <td  id="humidity"></td>
+                </tr>
+                <tr >
+                    <th >Pressure (hPa):</th>
+                    <td  id="pressure"></td>
+                </tr>
+                <tr >
+                    <th >Precip. Max/Min (mm):</th>
+                    <td  id="precipitationMaxMin"></dd>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+    </div>
+    <script>
+    // create a function the activates when the toggle is clicked to hide/show distance input
+    document.getElementById('flexSwitchCheckChecked').onclick = function() {
+        // If it's chaecked
+        if ( this.checked ) {
+            // set value to true, show distance input and change text on button
+            document.getElementById("flexSwitchCheckChecked").value = true;
+            document.getElementById("dist").style.visibility = "visible";
+            document.getElementById("routeButton").innerText = "Activate Auto Route";
+        } else { // and if toggle is not checked
+            // set value to false, hide distance input and change text on button
+            document.getElementById("flexSwitchCheckChecked").value = false;
+            document.getElementById("dist").style.visibility = "hidden";
+            document.getElementById("routeButton").innerText = "Activate Click Route";
+        }
+    };
+    </script>
+</body>
+</html>
