@@ -1,4 +1,3 @@
-import * as turf from '@turf/turf';
 
 // set API accessToken for MapBox
 mapboxgl.accessToken =
